@@ -1,0 +1,3077 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GAMERZ NETWORK — Your ultimate Minecraft Creator hub. Join our server, connect on social media, and explore everything in one place.">
+    <meta name="keywords" content="Minecraft, Gaming, Server, Creator, Linktree, All-in-One, GAMERZ NETWORK">
+    <meta name="author" content="GAMERZ NETWORK">
+    <meta name="theme-color" content="#0B0B0B">
+    <title>GAMERZ NETWORK | All-in-One Links</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           CSS VARIABLES
+           ============================================================ */
+        :root {
+            /* Colors */
+            --bg-primary: #0B0B0B;
+            --bg-secondary: #111111;
+            --bg-card: rgba(255, 255, 255, 0.04);
+            --bg-card-hover: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-border-hover: rgba(255, 255, 255, 0.18);
+
+            --emerald: #00FF88;
+            --cyan: #00E5FF;
+            --purple: #8B5CF6;
+            --gold: #FFD700;
+            --red: #FF2D55;
+
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-muted: rgba(255, 255, 255, 0.4);
+
+            /* Fonts */
+            --font-pixel: 'Press Start 2P', monospace;
+            --font-body: 'Inter', -apple-system, sans-serif;
+
+            /* Glows */
+            --glow-emerald: 0 0 20px rgba(0, 255, 136, 0.4), 0 0 60px rgba(0, 255, 136, 0.12);
+            --glow-cyan: 0 0 20px rgba(0, 229, 255, 0.4), 0 0 60px rgba(0, 229, 255, 0.12);
+            --glow-purple: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 60px rgba(139, 92, 246, 0.12);
+            --glow-gold: 0 0 20px rgba(255, 215, 0, 0.4), 0 0 60px rgba(255, 215, 0, 0.12);
+
+            /* Layout */
+            --max-width: 720px;
+            --nav-height: 64px;
+            --radius: 16px;
+            --radius-sm: 12px;
+        }
+
+        /* Light Theme */
+        [data-theme="light"] {
+            --bg-primary: #F0F0F0;
+            --bg-secondary: #E5E5E5;
+            --bg-card: rgba(0, 0, 0, 0.04);
+            --bg-card-hover: rgba(0, 0, 0, 0.08);
+            --glass-border: rgba(0, 0, 0, 0.1);
+            --glass-border-hover: rgba(0, 0, 0, 0.2);
+            --text-primary: #111111;
+            --text-secondary: rgba(0, 0, 0, 0.65);
+            --text-muted: rgba(0, 0, 0, 0.4);
+        }
+
+        /* ============================================================
+           RESET & BASE
+           ============================================================ */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--nav-height);
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            cursor: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font: inherit;
+            color: inherit;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--emerald), var(--cyan));
+            border-radius: 99px;
+        }
+
+        /* ============================================================
+           LOADING SCREEN
+           ============================================================ */
+        .loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: #050505;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-blocks {
+            display: flex;
+            gap: 8px;
+        }
+
+        .loader-block {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            animation: loaderBounce 1.2s ease-in-out infinite;
+        }
+
+        .loader-block:nth-child(1) {
+            background: var(--emerald);
+            animation-delay: 0s;
+        }
+
+        .loader-block:nth-child(2) {
+            background: var(--cyan);
+            animation-delay: 0.15s;
+        }
+
+        .loader-block:nth-child(3) {
+            background: var(--purple);
+            animation-delay: 0.3s;
+        }
+
+        .loader-block:nth-child(4) {
+            background: var(--gold);
+            animation-delay: 0.45s;
+        }
+
+        @keyframes loaderBounce {
+
+            0%,
+            80%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            40% {
+                transform: translateY(-24px) scale(1.1);
+            }
+        }
+
+        .loader-text {
+            font-family: var(--font-pixel);
+            font-size: 0.7rem;
+            color: var(--emerald);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .loader-progress {
+            width: 200px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 99px;
+            overflow: hidden;
+        }
+
+        .loader-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--emerald), var(--cyan));
+            border-radius: 99px;
+            transition: width 0.3s ease;
+        }
+
+        /* ============================================================
+           CUSTOM CURSOR
+           ============================================================ */
+        .cursor-glow {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--emerald);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99998;
+            transition: transform 0.15s ease, width 0.2s, height 0.2s, border-color 0.2s;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+
+        .cursor-dot {
+            position: fixed;
+            width: 5px;
+            height: 5px;
+            background: var(--emerald);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99998;
+            transform: translate(-50%, -50%);
+            transition: transform 0.08s ease;
+        }
+
+        .cursor-glow.clicking {
+            transform: translate(-50%, -50%) scale(2);
+            border-color: var(--cyan);
+        }
+
+        @media (max-width: 768px) {
+
+            .cursor-glow,
+            .cursor-dot {
+                display: none;
+            }
+
+            body {
+                cursor: auto;
+            }
+        }
+
+        /* ============================================================
+           MOUSE FOLLOW GLOW
+           ============================================================ */
+        .mouse-glow {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            transition: left 0.3s ease, top 0.3s ease;
+        }
+
+        /* ============================================================
+           PARTICLE CANVAS
+           ============================================================ */
+        #particles-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* ============================================================
+           FLOATING MINECRAFT BLOCKS
+           ============================================================ */
+        .floating-blocks {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .mc-block {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            opacity: 0.08;
+            animation: floatBlock linear infinite;
+        }
+
+        .mc-block:nth-child(1) {
+            background: #5D8C3E;
+            left: 5%;
+            width: 20px;
+            height: 20px;
+            animation-duration: 22s;
+            animation-delay: 0s;
+        }
+
+        .mc-block:nth-child(2) {
+            background: #8B6914;
+            left: 15%;
+            width: 14px;
+            height: 14px;
+            animation-duration: 28s;
+            animation-delay: 2s;
+        }
+
+        .mc-block:nth-child(3) {
+            background: #4FC1E9;
+            left: 30%;
+            width: 24px;
+            height: 24px;
+            animation-duration: 18s;
+            animation-delay: 4s;
+        }
+
+        .mc-block:nth-child(4) {
+            background: #FFD700;
+            left: 45%;
+            width: 16px;
+            height: 16px;
+            animation-duration: 25s;
+            animation-delay: 1s;
+        }
+
+        .mc-block:nth-child(5) {
+            background: #8B5CF6;
+            left: 60%;
+            width: 22px;
+            height: 22px;
+            animation-duration: 20s;
+            animation-delay: 3s;
+        }
+
+        .mc-block:nth-child(6) {
+            background: #FF2D55;
+            left: 75%;
+            width: 18px;
+            height: 18px;
+            animation-duration: 26s;
+            animation-delay: 5s;
+        }
+
+        .mc-block:nth-child(7) {
+            background: #00FF88;
+            left: 88%;
+            width: 12px;
+            height: 12px;
+            animation-duration: 30s;
+            animation-delay: 0.5s;
+        }
+
+        .mc-block:nth-child(8) {
+            background: #00E5FF;
+            left: 50%;
+            width: 26px;
+            height: 26px;
+            animation-duration: 24s;
+            animation-delay: 6s;
+        }
+
+        @keyframes floatBlock {
+            0% {
+                transform: translateY(110vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.08;
+            }
+
+            90% {
+                opacity: 0.08;
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* ============================================================
+           BACKGROUND
+           ============================================================ */
+        .bg-wrapper {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bg-image {
+            position: absolute;
+            inset: -30px;
+            background: url('background.png') center/cover no-repeat;
+            filter: blur(2px) brightness(0.4);
+            transition: transform 0.4s ease;
+            will-change: transform;
+        }
+
+        [data-theme="light"] .bg-image {
+            filter: blur(2px) brightness(0.7);
+        }
+
+        .bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(11, 11, 11, 0.55) 0%,
+                    rgba(11, 11, 11, 0.7) 40%,
+                    rgba(11, 11, 11, 0.92) 100%);
+            z-index: 1;
+        }
+
+        [data-theme="light"] .bg-overlay {
+            background: linear-gradient(180deg,
+                    rgba(240, 240, 240, 0.55) 0%,
+                    rgba(240, 240, 240, 0.75) 40%,
+                    rgba(240, 240, 240, 0.95) 100%);
+        }
+
+        .bg-fog {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background: radial-gradient(ellipse at 50% 100%, rgba(0, 255, 136, 0.03) 0%, transparent 60%);
+            animation: fogDrift 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes fogDrift {
+            0% {
+                transform: translateX(-20px) scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateX(20px) scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        /* ============================================================
+           MAIN CONTENT WRAPPER
+           ============================================================ */
+        .main-content {
+            position: relative;
+            z-index: 10;
+            padding-bottom: 40px;
+        }
+
+        /* ============================================================
+           NAVIGATION
+           ============================================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(24px) saturate(1.8);
+            -webkit-backdrop-filter: blur(24px) saturate(1.8);
+            background: rgba(11, 11, 11, 0.6);
+            border-bottom: 1px solid var(--glass-border);
+            transition: background 0.35s, box-shadow 0.35s;
+        }
+
+        [data-theme="light"] .navbar {
+            background: rgba(240, 240, 240, 0.7);
+        }
+
+        .navbar.scrolled {
+            background: rgba(11, 11, 11, 0.92);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        [data-theme="light"] .navbar.scrolled {
+            background: rgba(240, 240, 240, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: var(--font-pixel);
+            font-size: 0.55rem;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--emerald), var(--cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            transition: background 0.25s, border-color 0.25s, transform 0.25s;
+            font-size: 1rem;
+        }
+
+        .nav-btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--glass-border-hover);
+            transform: translateY(-1px);
+        }
+
+        .nav-btn svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--text-secondary);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .nav-btn:hover svg {
+            stroke: var(--emerald);
+        }
+
+        /* ============================================================
+           HERO SECTION
+           ============================================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: calc(var(--nav-height) + 40px) 20px 60px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        /* Avatar */
+        .avatar-wrapper {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 28px;
+            perspective: 800px;
+        }
+
+        .avatar-ring {
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: conic-gradient(var(--emerald), var(--cyan), var(--purple), var(--gold), var(--emerald));
+            animation: avatarSpin 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes avatarSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .avatar-ring::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            border-radius: 50%;
+            background: var(--bg-primary);
+        }
+
+        .avatar-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            image-rendering: pixelated;
+            transition: transform 0.4s ease;
+            border: 3px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .avatar-wrapper:hover .avatar-img {
+            transform: rotateY(15deg) rotateX(-5deg) scale(1.05);
+        }
+
+        .avatar-glow {
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.15);
+                opacity: 1;
+            }
+        }
+
+        /* Online Status */
+        .online-badge {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 22px;
+            height: 22px;
+            background: var(--emerald);
+            border-radius: 50%;
+            border: 3px solid var(--bg-primary);
+            z-index: 3;
+            box-shadow: 0 0 10px var(--emerald);
+            animation: onlinePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes onlinePulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px var(--emerald);
+            }
+
+            50% {
+                box-shadow: 0 0 20px var(--emerald), 0 0 40px rgba(0, 255, 136, 0.3);
+            }
+        }
+
+        /* Player Name */
+        .player-name {
+            font-family: var(--font-pixel);
+            font-size: clamp(0.9rem, 3vw, 1.3rem);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #fff 0%, var(--emerald) 50%, var(--cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: nameShimmer 4s ease-in-out infinite alternate;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @keyframes nameShimmer {
+            0% {
+                filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.3));
+            }
+
+            100% {
+                filter: drop-shadow(0 0 24px rgba(0, 229, 255, 0.3));
+            }
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            width: 22px;
+            height: 22px;
+            background: var(--cyan);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .verified-badge svg {
+            width: 13px;
+            height: 13px;
+            stroke: #000;
+            fill: none;
+            stroke-width: 3;
+        }
+
+        /* Bio */
+        .player-bio {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .player-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            color: var(--emerald);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--emerald);
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* Hero Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .btn-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            font-family: var(--font-pixel);
+            font-size: 0.55rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        .btn-hero:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        .btn-hero-primary {
+            background: linear-gradient(135deg, var(--emerald), #00cc6a);
+            color: #050505;
+            box-shadow: 0 4px 25px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn-hero-primary:hover {
+            box-shadow: 0 8px 40px rgba(0, 255, 136, 0.45);
+        }
+
+        .btn-hero-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(12px);
+        }
+
+        .btn-hero-secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--emerald);
+            box-shadow: 0 4px 25px rgba(0, 255, 136, 0.1);
+        }
+
+        /* Social Icons Row */
+        .hero-socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 12px;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-4px) scale(1.1);
+            border-color: transparent;
+        }
+
+        .social-icon.yt:hover {
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+            border-color: #FF0000;
+        }
+
+        .social-icon.dc:hover {
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+            border-color: #5865F2;
+        }
+
+        .social-icon.ig:hover {
+            box-shadow: 0 0 20px rgba(225, 48, 108, 0.4);
+            border-color: #E1306C;
+        }
+
+        .social-icon.fb:hover {
+            box-shadow: 0 0 20px rgba(24, 119, 242, 0.4);
+            border-color: #1877F2;
+        }
+
+        .social-icon.tw:hover {
+            box-shadow: 0 0 20px rgba(29, 161, 242, 0.4);
+            border-color: #1DA1F2;
+        }
+
+        .social-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--text-secondary);
+            transition: fill 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-icon.yt:hover svg {
+            fill: #FF0000;
+        }
+
+        .social-icon.dc:hover svg {
+            fill: #5865F2;
+        }
+
+        .social-icon.ig:hover svg {
+            fill: #E1306C;
+        }
+
+        .social-icon.fb:hover svg {
+            fill: #1877F2;
+        }
+
+        .social-icon.tw:hover svg {
+            fill: #1DA1F2;
+        }
+
+        /* ============================================================
+           SECTION COMMON
+           ============================================================ */
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-label {
+            font-family: var(--font-pixel);
+            font-size: 0.5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--emerald);
+            text-align: center;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .section-label::before,
+        .section-label::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--emerald));
+        }
+
+        .section-label::after {
+            background: linear-gradient(90deg, var(--emerald), transparent);
+        }
+
+        /* ============================================================
+           QUICK LINKS
+           ============================================================ */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .link-card {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 18px;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px) saturate(1.4);
+            -webkit-backdrop-filter: blur(16px) saturate(1.4);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            transition: all 0.35s ease;
+            overflow: hidden;
+            cursor: pointer;
+            perspective: 600px;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent);
+            opacity: 0;
+            transition: opacity 0.35s;
+            border-radius: var(--radius);
+        }
+
+        .link-card:hover::before {
+            opacity: 1;
+        }
+
+        .link-card:hover {
+            transform: translateY(-4px) rotateX(2deg);
+            background: var(--bg-card-hover);
+            border-color: var(--glass-border-hover);
+        }
+
+        .link-card-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: transform 0.35s, box-shadow 0.35s;
+        }
+
+        .link-card:hover .link-card-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .link-card-icon.yt {
+            background: rgba(255, 0, 0, 0.12);
+            color: #FF4444;
+        }
+
+        .link-card-icon.fb {
+            background: rgba(24, 119, 242, 0.12);
+            color: #1877F2;
+        }
+
+        .link-card-icon.dc {
+            background: rgba(88, 101, 242, 0.12);
+            color: #5865F2;
+        }
+
+        .link-card-icon.ig {
+            background: rgba(225, 48, 108, 0.12);
+            color: #E1306C;
+        }
+
+        .link-card-icon.web {
+            background: rgba(0, 229, 255, 0.12);
+            color: var(--cyan);
+        }
+
+        .link-card-icon.donate {
+            background: rgba(255, 215, 0, 0.12);
+            color: var(--gold);
+        }
+
+        .link-card-icon.store {
+            background: rgba(0, 255, 136, 0.12);
+            color: var(--emerald);
+        }
+
+        .link-card-icon.contact {
+            background: rgba(139, 92, 246, 0.12);
+            color: var(--purple);
+        }
+
+        .link-card:hover .link-card-icon.yt {
+            box-shadow: 0 0 16px rgba(255, 0, 0, 0.3);
+        }
+
+        .link-card:hover .link-card-icon.fb {
+            box-shadow: 0 0 16px rgba(24, 119, 242, 0.3);
+        }
+
+        .link-card:hover .link-card-icon.dc {
+            box-shadow: 0 0 16px rgba(88, 101, 242, 0.3);
+        }
+
+        .link-card:hover .link-card-icon.ig {
+            box-shadow: 0 0 16px rgba(225, 48, 108, 0.3);
+        }
+
+        .link-card:hover .link-card-icon.web {
+            box-shadow: 0 0 16px rgba(0, 229, 255, 0.3);
+        }
+
+        .link-card:hover .link-card-icon.donate {
+            box-shadow: 0 0 16px rgba(255, 215, 0, 0.3);
+        }
+
+        .link-card:hover .link-card-icon.store {
+            box-shadow: 0 0 16px rgba(0, 255, 136, 0.3);
+        }
+
+        .link-card:hover .link-card-icon.contact {
+            box-shadow: 0 0 16px rgba(139, 92, 246, 0.3);
+        }
+
+        .link-card-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .link-card-title {
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .link-card-desc {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .link-card-arrow {
+            color: var(--text-muted);
+            font-size: 1rem;
+            transition: transform 0.3s, color 0.3s;
+            flex-shrink: 0;
+        }
+
+        .link-card:hover .link-card-arrow {
+            transform: translateX(4px);
+            color: var(--emerald);
+        }
+
+        /* Ripple */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 255, 136, 0.2);
+            transform: scale(0);
+            animation: rippleAnim 0.6s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes rippleAnim {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* ============================================================
+           SERVER CARD
+           ============================================================ */
+        .server-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            border-radius: var(--radius);
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .server-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius);
+            padding: 1px;
+            background: linear-gradient(135deg, var(--emerald), var(--cyan), var(--purple));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: borderGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% {
+                opacity: 0.4;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .server-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .server-card-title {
+            font-family: var(--font-pixel);
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--emerald);
+        }
+
+        .server-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--emerald);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .server-status .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 6px var(--emerald);
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        .server-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .server-info-item {
+            text-align: center;
+            padding: 14px 8px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .server-info-label {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .server-info-value {
+            font-family: var(--font-pixel);
+            font-size: 0.55rem;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        .server-info-value.ip {
+            color: var(--cyan);
+        }
+
+        .copy-ip-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 229, 255, 0.1));
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: var(--font-pixel);
+            font-size: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--emerald);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .copy-ip-btn:hover {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(0, 229, 255, 0.2));
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .copy-ip-btn svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--emerald);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .copy-ip-btn.copied {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.25), rgba(0, 229, 255, 0.25));
+            border-color: var(--emerald);
+            box-shadow: 0 0 24px rgba(0, 255, 136, 0.2);
+            animation: copiedPulse 0.4s ease;
+        }
+
+        @keyframes copiedPulse {
+            0% {
+                transform: scale(1);
+            }
+
+            40% {
+                transform: scale(1.04);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* ============================================================
+           LATEST STREAM / VIDEO
+           ============================================================ */
+        .stream-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s ease;
+        }
+
+        .stream-card:hover {
+            border-color: rgba(255, 45, 85, 0.4);
+            box-shadow: 0 8px 40px rgba(255, 45, 85, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .stream-thumbnail-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .stream-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, filter 0.4s ease;
+        }
+
+        .stream-card:hover .stream-thumbnail {
+            transform: scale(1.05);
+            filter: brightness(0.7);
+        }
+
+        .stream-play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            z-index: 3;
+        }
+
+        .stream-card:hover .stream-play-overlay {
+            opacity: 1;
+        }
+
+        .stream-play-btn {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(255, 45, 85, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(255, 45, 85, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .stream-play-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 50px rgba(255, 45, 85, 0.6);
+        }
+
+        .stream-play-btn svg {
+            width: 26px;
+            height: 26px;
+            fill: #fff;
+            margin-left: 3px;
+        }
+
+        .stream-thumbnail-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .stream-live-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            z-index: 4;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 50px;
+            background: rgba(255, 45, 85, 0.9);
+            backdrop-filter: blur(8px);
+            font-family: var(--font-pixel);
+            font-size: 0.45rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 0 16px rgba(255, 45, 85, 0.4);
+        }
+
+        .stream-live-badge .live-dot {
+            width: 6px;
+            height: 6px;
+            background: #fff;
+            border-radius: 50%;
+            animation: blink 1.2s ease-in-out infinite;
+        }
+
+        .stream-new-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            z-index: 4;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 50px;
+            background: rgba(0, 229, 255, 0.85);
+            backdrop-filter: blur(8px);
+            font-family: var(--font-pixel);
+            font-size: 0.45rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #000;
+            font-weight: 700;
+            box-shadow: 0 0 16px rgba(0, 229, 255, 0.3);
+        }
+
+        .stream-info {
+            padding: 18px 20px;
+        }
+
+        .stream-info-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .stream-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .stream-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .stream-meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stream-meta-item svg {
+            width: 13px;
+            height: 13px;
+            stroke: var(--text-muted);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .stream-watch-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 0 0 var(--radius) var(--radius);
+            background: linear-gradient(135deg, rgba(255, 45, 85, 0.1), rgba(139, 92, 246, 0.1));
+            border-top: 1px solid rgba(255, 45, 85, 0.15);
+            font-family: var(--font-pixel);
+            font-size: 0.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--red);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .stream-watch-btn:hover {
+            background: linear-gradient(135deg, rgba(255, 45, 85, 0.2), rgba(139, 92, 246, 0.2));
+            box-shadow: 0 0 20px rgba(255, 45, 85, 0.12);
+        }
+
+        .stream-watch-btn svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--red);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* ============================================================
+           PREMIUM ACTION BUTTONS
+           ============================================================ */
+        .action-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px) saturate(1.4);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .action-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .action-btn:hover::before {
+            opacity: 1;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px) scale(1.01);
+            border-color: transparent;
+        }
+
+        .action-btn-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .action-btn:hover .action-btn-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        /* Action button color variants */
+        .action-btn.discord::before {
+            background: linear-gradient(135deg, rgba(88, 101, 242, 0.08), transparent);
+        }
+
+        .action-btn.discord:hover {
+            border-color: rgba(88, 101, 242, 0.4);
+            box-shadow: 0 0 30px rgba(88, 101, 242, 0.15);
+        }
+
+        .action-btn.discord .action-btn-icon {
+            background: rgba(88, 101, 242, 0.12);
+            color: #5865F2;
+        }
+
+        .action-btn.vote::before {
+            background: linear-gradient(135deg, rgba(0, 229, 255, 0.08), transparent);
+        }
+
+        .action-btn.vote:hover {
+            border-color: rgba(0, 229, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
+        }
+
+        .action-btn.vote .action-btn-icon {
+            background: rgba(0, 229, 255, 0.12);
+            color: var(--cyan);
+        }
+
+        .action-btn.vip::before {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), transparent);
+        }
+
+        .action-btn.vip:hover {
+            border-color: rgba(255, 215, 0, 0.4);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+        }
+
+        .action-btn.vip .action-btn-icon {
+            background: rgba(255, 215, 0, 0.12);
+            color: var(--gold);
+        }
+
+        .action-btn.mods::before {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.08), transparent);
+        }
+
+        .action-btn.mods:hover {
+            border-color: rgba(0, 255, 136, 0.4);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.15);
+        }
+
+        .action-btn.mods .action-btn-icon {
+            background: rgba(0, 255, 136, 0.12);
+            color: var(--emerald);
+        }
+
+        .action-btn.resource::before {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), transparent);
+        }
+
+        .action-btn.resource:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+        }
+
+        .action-btn.resource .action-btn-icon {
+            background: rgba(139, 92, 246, 0.12);
+            color: var(--purple);
+        }
+
+        .action-btn.staff::before {
+            background: linear-gradient(135deg, rgba(255, 45, 85, 0.08), transparent);
+        }
+
+        .action-btn.staff:hover {
+            border-color: rgba(255, 45, 85, 0.4);
+            box-shadow: 0 0 30px rgba(255, 45, 85, 0.15);
+        }
+
+        .action-btn.staff .action-btn-icon {
+            background: rgba(255, 45, 85, 0.12);
+            color: var(--red);
+        }
+
+        .action-btn-info {
+            flex: 1;
+        }
+
+        .action-btn-title {
+            font-weight: 700;
+            font-size: 0.88rem;
+            letter-spacing: 0.5px;
+        }
+
+        .action-btn-desc {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .action-btn-arrow {
+            font-size: 1rem;
+            color: var(--text-muted);
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .action-btn:hover .action-btn-arrow {
+            transform: translateX(4px);
+            color: var(--text-primary);
+        }
+
+        /* ============================================================
+           LATEST UPDATES / ANNOUNCEMENTS
+           ============================================================ */
+        .updates-timeline {
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .updates-timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--emerald), var(--purple), transparent);
+            border-radius: 99px;
+        }
+
+        .update-card {
+            position: relative;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px) saturate(1.4);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 14px;
+            transition: all 0.35s;
+        }
+
+        .update-card:hover {
+            transform: translateX(4px);
+            background: var(--bg-card-hover);
+            border-color: var(--glass-border-hover);
+        }
+
+        .update-card::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 24px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--emerald);
+            border: 2px solid var(--bg-primary);
+            box-shadow: 0 0 8px var(--emerald);
+        }
+
+        .update-card:nth-child(2)::before {
+            background: var(--cyan);
+            box-shadow: 0 0 8px var(--cyan);
+        }
+
+        .update-card:nth-child(3)::before {
+            background: var(--purple);
+            box-shadow: 0 0 8px var(--purple);
+        }
+
+        .update-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .update-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .update-badge.new {
+            background: rgba(0, 255, 136, 0.1);
+            color: var(--emerald);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .update-badge.patch {
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--cyan);
+            border: 1px solid rgba(0, 229, 255, 0.2);
+        }
+
+        .update-badge.event {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--purple);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .update-date {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        .update-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .update-desc {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Countdown */
+        .countdown-card {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(0, 229, 255, 0.08));
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        .countdown-label {
+            font-family: var(--font-pixel);
+            font-size: 0.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--purple);
+            margin-bottom: 16px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-value {
+            font-family: var(--font-pixel);
+            font-size: clamp(1rem, 4vw, 1.6rem);
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-sm);
+            padding: 10px 14px;
+            min-width: 55px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .countdown-unit {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .footer-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--emerald), var(--cyan), var(--purple), transparent);
+            margin: 40px 0 30px;
+            animation: dividerShimmer 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes dividerShimmer {
+            0% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 0.7;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .footer-copy .heart {
+            color: var(--red);
+            animation: heartbeat 1.5s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .back-to-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 50px;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .back-to-top:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--emerald);
+            color: var(--emerald);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.1);
+        }
+
+        .back-to-top svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            animation: arrowBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes arrowBounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
+        }
+
+        /* ============================================================
+           TOAST NOTIFICATIONS
+           ============================================================ */
+        .toast-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .toast {
+            padding: 12px 20px;
+            background: rgba(11, 11, 11, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: toastIn 0.4s ease forwards;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        [data-theme="light"] .toast {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .toast.out {
+            animation: toastOut 0.3s ease forwards;
+        }
+
+        .toast-icon {
+            font-size: 1.1rem;
+        }
+
+        @keyframes toastIn {
+            from {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes toastOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+        }
+
+        /* ============================================================
+           VISIT COUNTER
+           ============================================================ */
+        .visit-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .visit-counter svg {
+            width: 12px;
+            height: 12px;
+            stroke: var(--text-muted);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* ============================================================
+           SCROLL REVEAL
+           ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-stagger>.reveal {
+            transition-delay: calc(var(--i, 0) * 0.08s);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 600px) {
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .server-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-hero {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .countdown-timer {
+                gap: 8px;
+            }
+
+            .countdown-value {
+                min-width: 45px;
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+
+            .player-name {
+                font-size: 0.8rem;
+            }
+
+            .toast-container {
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero-socials {
+                flex-wrap: wrap;
+            }
+
+            .nav-brand {
+                font-size: 0.45rem;
+            }
+        }
+
+        /* ============================================================
+           EXTRA ANIMATIONS
+           ============================================================ */
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes neonPulse {
+
+            0%,
+            100% {
+                text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+            }
+
+            50% {
+                text-shadow: 0 0 20px currentColor, 0 0 40px currentColor, 0 0 60px currentColor;
+            }
+        }
+
+        /* Glass Reflection effect on cards */
+        .glass-reflect {
+            position: relative;
+        }
+
+        .glass-reflect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+            transform: skewX(-15deg);
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .glass-reflect:hover::after {
+            left: 130%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ============================================================
+         LOADING SCREEN
+         ============================================================ -->
+    <div class="loader" id="loader">
+        <div class="loader-blocks">
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+            <div class="loader-block"></div>
+        </div>
+        <div class="loader-text">Loading World...</div>
+        <div class="loader-progress">
+            <div class="loader-progress-bar" id="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         CUSTOM CURSOR
+         ============================================================ -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- ============================================================
+         MOUSE FOLLOW GLOW
+         ============================================================ -->
+    <div class="mouse-glow" id="mouse-glow"></div>
+
+    <!-- ============================================================
+         BACKGROUND
+         ============================================================ -->
+    <div class="bg-wrapper">
+        <div class="bg-image" id="bg-image"></div>
+        <div class="bg-overlay"></div>
+        <div class="bg-fog"></div>
+    </div>
+
+    <!-- ============================================================
+         FLOATING MINECRAFT BLOCKS
+         ============================================================ -->
+    <div class="floating-blocks">
+        <div class="mc-block"></div>
+        <div class="mc-block"></div>
+        <div class="mc-block"></div>
+        <div class="mc-block"></div>
+        <div class="mc-block"></div>
+        <div class="mc-block"></div>
+        <div class="mc-block"></div>
+        <div class="mc-block"></div>
+    </div>
+
+    <!-- ============================================================
+         PARTICLE CANVAS
+         ============================================================ -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ============================================================
+         NAVIGATION
+         ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <div class="nav-brand">⛏ GAMERZ</div>
+            <div class="nav-controls">
+                <!-- Theme Toggle -->
+                <button class="nav-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle dark/light theme">
+                    <svg id="theme-icon-sun" viewBox="0 0 24 24" style="display:none;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg id="theme-icon-moon" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <!-- Music Toggle -->
+                <button class="nav-btn" id="music-toggle" title="Toggle Music" aria-label="Toggle background music">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 18V5l12-2v13" />
+                        <circle cx="6" cy="18" r="3" />
+                        <circle cx="18" cy="16" r="3" />
+                    </svg>
+                </button>
+                <!-- Share Button -->
+                <button class="nav-btn" id="share-btn" title="Share" aria-label="Share this page">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="18" cy="5" r="3" />
+                        <circle cx="6" cy="12" r="3" />
+                        <circle cx="18" cy="19" r="3" />
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         MAIN CONTENT
+         ============================================================ -->
+    <main class="main-content">
+
+        <!-- ====== HERO ====== -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <!-- Visit Counter -->
+                <div class="visit-counter reveal">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                        <circle cx="12" cy="12" r="3" />
+                    </svg>
+                    <span id="visit-count">0</span> views
+                </div>
+
+                <!-- Avatar -->
+                <div class="avatar-wrapper reveal">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-ring"></div>
+                    <img class="avatar-img" src="https://mc-heads.net/avatar/MHF_Steve/130" alt="Player Avatar"
+                        loading="eager">
+                    <div class="online-badge"></div>
+                </div>
+
+                <!-- Name -->
+                <h1 class="player-name reveal">
+                    GAMERZ NETWORK
+                    <span class="verified-badge" title="Verified Creator">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                    </span>
+                </h1>
+
+                <!-- Bio -->
+                <p class="player-bio reveal">⚔️ Minecraft Creator & Server Owner • Building Epic Worlds • Join the
+                    Adventure! 🌍</p>
+
+                <!-- Status -->
+                <div class="player-status reveal">
+                    <span class="status-dot"></span>
+                    Online Now
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hero-buttons reveal">
+                    <a href="https://discord.gg/m8kDtAQvYJ" class="btn-hero btn-hero-primary" id="btn-discord-hero">
+                        🎮 Join Discord
+                    </a>
+                    <a href="#" class="btn-hero btn-hero-secondary" id="btn-server-hero">
+                        🖥️ Visit Server
+                    </a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="hero-socials reveal">
+                    <a href="https://www.youtube.com/@KRISHgamer_op" class="social-icon yt" title="YouTube"
+                        aria-label="YouTube">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.56 31.56 0 0 0 0 12a31.56 31.56 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.85.55 9.38.55 9.38.55s7.53 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.56 31.56 0 0 0 24 12a31.56 31.56 0 0 0-.5-5.81zM9.54 15.57V8.43L15.82 12l-6.28 3.57z" />
+                        </svg>
+                    </a>
+                    <a href="https://discord.gg/m8kDtAQvYJ" class="social-icon dc" title="Discord" aria-label="Discord">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20.32 4.37a19.8 19.8 0 0 0-4.93-1.51.07.07 0 0 0-.08.04c-.21.38-.45.87-.61 1.26a18.27 18.27 0 0 0-5.4 0 12.64 12.64 0 0 0-.62-1.26.07.07 0 0 0-.08-.04 19.74 19.74 0 0 0-4.93 1.51.07.07 0 0 0-.03.03C1.07 8.42.32 12.33.7 16.2a.08.08 0 0 0 .03.05 19.9 19.9 0 0 0 5.99 3.03.07.07 0 0 0 .08-.03c.46-.63.87-1.3 1.22-2a.07.07 0 0 0-.04-.1 13.1 13.1 0 0 1-1.87-.9.07.07 0 0 1-.01-.12c.13-.09.25-.19.37-.29a.07.07 0 0 1 .07-.01c3.93 1.8 8.18 1.8 12.07 0a.07.07 0 0 1 .07.01c.12.1.25.2.37.29a.07.07 0 0 1 0 .12c-.6.35-1.22.65-1.87.9a.07.07 0 0 0-.04.1c.36.7.77 1.37 1.22 2a.07.07 0 0 0 .08.03 19.83 19.83 0 0 0 6-3.03.08.08 0 0 0 .03-.05c.44-4.54-.74-8.49-3.11-11.99a.06.06 0 0 0-.03-.03zM8.02 13.72c-1.04 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12 0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.04 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12 0 1.17-.83 2.12-1.89 2.12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/ronspectrax_assam/" class="social-icon ig" title="Instagram"
+                        aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
+                                stroke-width="1.5" />
+                            <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="17.5" cy="6.5" r="1.25" fill="currentColor" stroke="none" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon fb" title="Facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon tw" title="Twitter / X" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+
+            <!-- ====== QUICK LINKS ====== -->
+            <section class="section" id="links-section">
+                <div class="section-label reveal">⚡ Quick Links</div>
+                <div class="links-grid reveal-stagger">
+                    <a href="https://www.youtube.com/channel/UCsMnWj861LKoGw4Uxq9GCIg"
+                        class="link-card glass-reflect reveal" style="--i:0" onclick="createRipple(event)">
+                        <div class="link-card-icon yt">▶️</div>
+                        <div class="link-card-info">
+                            <div class="link-card-title">YouTube</div>
+                            <div class="link-card-desc">Watch gaming videos</div>
+                        </div>
+                        <span class="link-card-arrow">→</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61590440352098"
+                        class="link-card glass-reflect reveal" style="--i:1" onclick="createRipple(event)">
+                        <div class="link-card-icon fb">📘</div>
+                        <div class="link-card-info">
+                            <div class="link-card-title">Facebook</div>
+                            <div class="link-card-desc">Follow our page</div>
+                        </div>
+                        <span class="link-card-arrow">→</span>
+                    </a>
+                    <a href="https://discord.gg/Zrcga7v8zz" class="link-card glass-reflect reveal" style="--i:2"
+                        onclick="createRipple(event)">
+                        <div class="link-card-icon dc">💬</div>
+                        <div class="link-card-info">
+                            <div class="link-card-title">Discord</div>
+                            <div class="link-card-desc">Join the community</div>
+                        </div>
+                        <span class="link-card-arrow">→</span>
+                    </a>
+                    <a href="https://www.instagram.com/ronspectrax_assam/" class="link-card glass-reflect reveal"
+                        style="--i:3" onclick="createRipple(event)">
+                        <div class="link-card-icon ig">📸</div>
+                        <div class="link-card-info">
+                            <div class="link-card-title">Instagram</div>
+                            <div class="link-card-desc">Behind the scenes</div>
+                        </div>
+                        <span class="link-card-arrow">→</span>
+                    </a>
+                    <a href="#" class="link-card glass-reflect reveal" style="--i:4" onclick="createRipple(event)">
+                        <div class="link-card-icon web">🌐</div>
+                        <div class="link-card-info">
+                            <div class="link-card-title">Website (Coming Soon)</div>
+                            <div class="link-card-desc">Official site</div>
+                        </div>
+                        <span class="link-card-arrow">→</span>
+                    </a>
+                    <a href="#" class="link-card glass-reflect reveal" style="--i:5" onclick="createRipple(event)">
+                        <div class="link-card-icon donate">💰</div>
+                        <div class="link-card-info">
+                            <div class="link-card-title">Donate</div>
+                            <div class="link-card-desc">Support the server</div>
+                        </div>
+                        <span class="link-card-arrow">→</span>
+                    </a>
+                    <a href="#" class="link-card glass-reflect reveal" style="--i:6" onclick="createRipple(event)">
+                        <div class="link-card-icon store">🛒</div>
+                        <div class="link-card-info">
+                            <div class="link-card-title">Store (Coming Soon)</div>
+                            <div class="link-card-desc">Shop ranks & items</div>
+                        </div>
+                        <span class="link-card-arrow">→</span>
+                    </a>
+                    <a href="#" class="link-card glass-reflect reveal" style="--i:7" onclick="createRipple(event)">
+                        <div class="link-card-icon contact">✉️</div>
+                        <div class="link-card-info">
+                            <div class="link-card-title">Contact (Coming Soon)</div>
+                            <div class="link-card-desc">Get in touch</div>
+                        </div>
+                        <span class="link-card-arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ====== SERVER CARD ====== -->
+            <section class="section" id="server-section">
+                <div class="section-label reveal">🖥️ Server Info</div>
+                <div class="server-card reveal">
+                    <div class="server-card-header">
+                        <div class="server-card-title">⛏ Minecraft Server</div>
+                        <div class="server-status">
+                            <span class="dot"></span>
+                            Online
+                        </div>
+                    </div>
+                    <div class="server-info-grid">
+                        <div class="server-info-item">
+                            <div class="server-info-label">Server IP</div>
+                            <div class="server-info-value ip" id="server-ip">play.gamerznetwork.com</div>
+                        </div>
+                        <div class="server-info-item">
+                            <div class="server-info-label">Bedrock Port</div>
+                            <div class="server-info-value">19132</div>
+                        </div>
+                        <div class="server-info-item">
+                            <div class="server-info-label">Version</div>
+                            <div class="server-info-value">Java 1.16-1.20+</div>
+                        </div>
+                    </div>
+                    <button class="copy-ip-btn" id="copy-ip-btn" onclick="copyIP()">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                        </svg>
+                        Copy Server IP
+                    </button>
+                </div>
+            </section>
+
+            <!-- ====== LATEST STREAM / VIDEO ====== -->
+            <section class="section" id="stream-section">
+                <div class="section-label reveal">🎬 Latest Video / Stream</div>
+                <div class="stream-card reveal">
+                    <a href="#" id="stream-link" class="stream-thumbnail-wrapper" target="_blank" rel="noopener">
+                        <!-- Replace src with your actual thumbnail -->
+                        <img src="thumbnail.png" alt="Latest Stream Thumbnail" class="stream-thumbnail"
+                            id="stream-thumbnail">
+                        <div class="stream-thumbnail-gradient"></div>
+                        <!-- Toggle between live-badge and new-badge -->
+                        <div class="stream-new-badge" id="stream-badge">
+                            ▶ New Video
+                        </div>
+                        <div class="stream-play-overlay">
+                            <div class="stream-play-btn">
+                                <svg viewBox="0 0 24 24">
+                                    <polygon points="5,3 19,12 5,21" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="stream-info">
+                        <div class="stream-title" id="stream-title">Latest Video or Stream</div>
+                        <div class="stream-meta">
+                            <span class="stream-meta-item">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                                New
+                            </span>
+                            <span class="stream-meta-item">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                                Watch Now
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="stream-watch-btn" id="stream-watch-btn" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24">
+                            <polygon points="5,3 19,12 5,21" fill="var(--red)" stroke="none" />
+                        </svg>
+                        Watch Now
+                    </a>
+                </div>
+            </section>
+
+            <!-- ====== PREMIUM ACTION BUTTONS ====== -->
+            <section class="section" id="actions-section">
+                <div class="section-label reveal">🎯 Quick Actions</div>
+                <div class="action-list reveal-stagger">
+                    <a href="#" class="action-btn discord glass-reflect reveal" style="--i:0"
+                        onclick="createRipple(event)">
+                        <div class="action-btn-icon">🎮</div>
+                        <div class="action-btn-info">
+                            <div class="action-btn-title">Join Discord</div>
+                            <div class="action-btn-desc">Connect with the community</div>
+                        </div>
+                        <span class="action-btn-arrow">→</span>
+                    </a>
+                    <a href="#" class="action-btn vote glass-reflect reveal" style="--i:1"
+                        onclick="createRipple(event)">
+                        <div class="action-btn-icon">🗳️</div>
+                        <div class="action-btn-info">
+                            <div class="action-btn-title">Vote Server (Coming Soon)</div>
+                            <div class="action-btn-desc">Help us grow & earn rewards</div>
+                        </div>
+                        <span class="action-btn-arrow">→</span>
+                    </a>
+                    <a href="#" class="action-btn vip glass-reflect reveal" style="--i:2" onclick="createRipple(event)">
+                        <div class="action-btn-icon">👑</div>
+                        <div class="action-btn-info">
+                            <div class="action-btn-title">Buy VIP (Coming Soon)</div>
+                            <div class="action-btn-desc">Unlock exclusive perks & ranks</div>
+                        </div>
+                        <span class="action-btn-arrow">→</span>
+                    </a>
+                    <a href="#" class="action-btn mods glass-reflect reveal" style="--i:3"
+                        onclick="createRipple(event)">
+                        <div class="action-btn-icon">📦</div>
+                        <div class="action-btn-info">
+                            <div class="action-btn-title">Download Mods (Coming Soon)</div>
+                            <div class="action-btn-desc">Enhanced gameplay experience</div>
+                        </div>
+                        <span class="action-btn-arrow">→</span>
+                    </a>
+                    <a href="#" class="action-btn resource glass-reflect reveal" style="--i:4"
+                        onclick="createRipple(event)">
+                        <div class="action-btn-icon">🎨</div>
+                        <div class="action-btn-info">
+                            <div class="action-btn-title">Resource Pack (Coming Soon)</div>
+                            <div class="action-btn-desc">Custom textures & sounds</div>
+                        </div>
+                        <span class="action-btn-arrow">→</span>
+                    </a>
+                    <a href="#" class="action-btn staff glass-reflect reveal" style="--i:5"
+                        onclick="createRipple(event)">
+                        <div class="action-btn-icon">📋</div>
+                        <div class="action-btn-info">
+                            <div class="action-btn-title">Apply Staff (Coming Soon)</div>
+                            <div class="action-btn-desc">Join our team of moderators</div>
+                        </div>
+                        <span class="action-btn-arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ====== LATEST UPDATES ====== -->
+            <section class="section" id="updates-section">
+                <div class="section-label reveal">📢 Latest Updates</div>
+                <div class="updates-timeline reveal-stagger">
+                    <div class="update-card reveal" style="--i:0">
+                        <div class="update-card-header">
+                            <span class="update-badge new">🆕 New Season</span>
+                            <span class="update-date">June 2026</span>
+                        </div>
+                        <div class="update-title">Season 5: The Nether Awakens</div>
+                        <div class="update-desc">Brand new map, custom enchantments, and legendary boss fights await.
+                            The Nether dimension has been completely redesigned!</div>
+                    </div>
+                    <div class="update-card reveal" style="--i:1">
+                        <div class="update-card-header">
+                            <span class="update-badge patch">🔧 Patch Notes</span>
+                            <span class="update-date">June 2026</span>
+                        </div>
+                        <div class="update-title">v2.4.1 — Performance Update</div>
+                        <div class="update-desc">Major TPS improvements, anti-cheat upgrades, new chat system, and over
+                            50 bug fixes across all game modes.</div>
+                    </div>
+                    <div class="update-card reveal" style="--i:2">
+                        <div class="update-card-header">
+                            <span class="update-badge event">🎉 Event</span>
+                            <span class="update-date">Coming Soon</span>
+                        </div>
+                        <div class="update-title">Summer Championship 2026</div>
+                        <div class="update-desc">Compete in PvP tournaments, build battles, and parkour races for
+                            exclusive prizes and legendary titles!</div>
+                    </div>
+                </div>
+
+                <!-- Countdown -->
+                <div class="countdown-card reveal">
+                    <div class="countdown-label">⏳ Next Event Starts In</div>
+                    <div class="countdown-timer" id="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="cd-days">00</span>
+                            <span class="countdown-unit">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="cd-hours">00</span>
+                            <span class="countdown-unit">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="cd-mins">00</span>
+                            <span class="countdown-unit">Mins</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="cd-secs">00</span>
+                            <span class="countdown-unit">Secs</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== FOOTER ====== -->
+            <div class="footer-divider"></div>
+            <footer class="footer" id="footer">
+                <div class="footer-socials">
+                    <a href="https://www.youtube.com/channel/UCsMnWj861LKoGw4Uxq9GCIg" class="social-icon yt"
+                        title="YouTube" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.56 31.56 0 0 0 0 12a31.56 31.56 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.85.55 9.38.55 9.38.55s7.53 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.56 31.56 0 0 0 24 12a31.56 31.56 0 0 0-.5-5.81zM9.54 15.57V8.43L15.82 12l-6.28 3.57z" />
+                        </svg>
+                    </a>
+                    <a href="https://discord.gg/Zrcga7v8zz" class="social-icon dc" title="Discord" aria-label="Discord">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20.32 4.37a19.8 19.8 0 0 0-4.93-1.51.07.07 0 0 0-.08.04c-.21.38-.45.87-.61 1.26a18.27 18.27 0 0 0-5.4 0 12.64 12.64 0 0 0-.62-1.26.07.07 0 0 0-.08-.04 19.74 19.74 0 0 0-4.93 1.51.07.07 0 0 0-.03.03C1.07 8.42.32 12.33.7 16.2a.08.08 0 0 0 .03.05 19.9 19.9 0 0 0 5.99 3.03.07.07 0 0 0 .08-.03c.46-.63.87-1.3 1.22-2a.07.07 0 0 0-.04-.1 13.1 13.1 0 0 1-1.87-.9.07.07 0 0 1-.01-.12c.13-.09.25-.19.37-.29a.07.07 0 0 1 .07-.01c3.93 1.8 8.18 1.8 12.07 0a.07.07 0 0 1 .07.01c.12.1.25.2.37.29a.07.07 0 0 1 0 .12c-.6.35-1.22.65-1.87.9a.07.07 0 0 0-.04.1c.36.7.77 1.37 1.22 2a.07.07 0 0 0 .08.03 19.83 19.83 0 0 0 6-3.03.08.08 0 0 0 .03-.05c.44-4.54-.74-8.49-3.11-11.99a.06.06 0 0 0-.03-.03zM8.02 13.72c-1.04 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12 0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.04 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12 0 1.17-.83 2.12-1.89 2.12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/ronspectrax_assam/" class="social-icon ig" title="Instagram"
+                        aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
+                                stroke-width="1.5" />
+                            <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="17.5" cy="6.5" r="1.25" fill="currentColor" stroke="none" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61590440352098" class="social-icon fb"
+                        title="Facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon tw" title="Twitter / X" aria-label="Twitter / X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-copy">
+                    © 2026 GAMERZ NETWORK — Made by Ronnie <span class="heart">❤️</span> for Minecraft
+                </p>
+                <button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                    <svg viewBox="0 0 24 24">
+                        <polyline points="18 15 12 9 6 15" />
+                    </svg>
+                    Back to Top
+                </button>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- ============================================================
+         TOAST CONTAINER
+         ============================================================ -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- ============================================================
+         JAVASCRIPT
+         ============================================================ -->
+    <script>
+        /* ============================================================
+           LOADING SCREEN
+           ============================================================ */
+        (function () {
+            const bar = document.getElementById('loader-bar');
+            const loader = document.getElementById('loader');
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 18 + 5;
+                if (progress > 100) progress = 100;
+                bar.style.width = progress + '%';
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        loader.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }, 400);
+                }
+            }, 200);
+            document.body.style.overflow = 'hidden';
+        })();
+
+        /* ============================================================
+           CUSTOM CURSOR
+           ============================================================ */
+        const cursorGlow = document.getElementById('cursor-glow');
+        const cursorDot = document.getElementById('cursor-dot');
+
+        if (window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursorGlow.style.left = e.clientX + 'px';
+                cursorGlow.style.top = e.clientY + 'px';
+                cursorDot.style.left = e.clientX + 'px';
+                cursorDot.style.top = e.clientY + 'px';
+            });
+
+            document.addEventListener('mousedown', () => cursorGlow.classList.add('clicking'));
+            document.addEventListener('mouseup', () => cursorGlow.classList.remove('clicking'));
+        }
+
+        /* ============================================================
+           MOUSE FOLLOW GLOW
+           ============================================================ */
+        const mouseGlow = document.getElementById('mouse-glow');
+        document.addEventListener('mousemove', (e) => {
+            mouseGlow.style.left = e.clientX + 'px';
+            mouseGlow.style.top = e.clientY + 'px';
+        });
+
+        /* ============================================================
+           PARALLAX BACKGROUND
+           ============================================================ */
+        const bgImage = document.getElementById('bg-image');
+        document.addEventListener('mousemove', (e) => {
+            const xOffset = (e.clientX / window.innerWidth - 0.5) * 12;
+            const yOffset = (e.clientY / window.innerHeight - 0.5) * 12;
+            bgImage.style.transform = `translate(${xOffset}px, ${yOffset}px) scale(1.05)`;
+        });
+
+        /* ============================================================
+           SCROLL REVEAL (IntersectionObserver)
+           ============================================================ */
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        /* ============================================================
+           NAVBAR SCROLL
+           ============================================================ */
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        /* ============================================================
+           RIPPLE EFFECT
+           ============================================================ */
+        function createRipple(e) {
+            const card = e.currentTarget;
+            const rect = card.getBoundingClientRect();
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple';
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+            ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+            card.appendChild(ripple);
+            ripple.addEventListener('animationend', () => ripple.remove());
+        }
+
+        /* ============================================================
+           COPY SERVER IP
+           ============================================================ */
+        function copyIP() {
+            const ip = document.getElementById('server-ip').textContent;
+            navigator.clipboard.writeText(ip).then(() => {
+                showToast('✅', 'Server IP copied to clipboard!');
+                const btn = document.getElementById('copy-ip-btn');
+                btn.classList.add('copied');
+                btn.innerHTML = `<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--emerald);fill:none;stroke-width:2"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = `<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:var(--emerald);fill:none;stroke-width:2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Server IP`;
+                }, 2000);
+            }).catch(() => {
+                showToast('⚠️', 'Failed to copy. Try manually.');
+            });
+        }
+
+        /* ============================================================
+           TOAST NOTIFICATIONS
+           ============================================================ */
+        function showToast(icon, message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<span class="toast-icon">${icon}</span>${message}`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('out');
+                toast.addEventListener('animationend', () => toast.remove());
+            }, 3000);
+        }
+
+        /* ============================================================
+           THEME TOGGLE
+           ============================================================ */
+        const themeToggle = document.getElementById('theme-toggle');
+        const iconSun = document.getElementById('theme-icon-sun');
+        const iconMoon = document.getElementById('theme-icon-moon');
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            if (theme === 'light') {
+                iconSun.style.display = 'none';
+                iconMoon.style.display = 'block';
+            } else {
+                iconSun.style.display = 'block';
+                iconMoon.style.display = 'none';
+            }
+        }
+
+        // Init theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            setTheme(next);
+            showToast(next === 'dark' ? '🌙' : '☀️', `${next === 'dark' ? 'Dark' : 'Light'} mode activated`);
+        });
+
+        /* ============================================================
+           MUSIC TOGGLE (Visual only)
+           ============================================================ */
+        let musicPlaying = false;
+        const musicToggle = document.getElementById('music-toggle');
+
+        musicToggle.addEventListener('click', () => {
+            musicPlaying = !musicPlaying;
+            if (musicPlaying) {
+                musicToggle.style.borderColor = 'rgba(0,255,136,0.4)';
+                musicToggle.style.boxShadow = '0 0 12px rgba(0,255,136,0.15)';
+                showToast('🎵', 'Music enabled (no audio file loaded)');
+            } else {
+                musicToggle.style.borderColor = '';
+                musicToggle.style.boxShadow = '';
+                showToast('🔇', 'Music disabled');
+            }
+        });
+
+        /* ============================================================
+           SHARE BUTTON
+           ============================================================ */
+        document.getElementById('share-btn').addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'GAMERZ NETWORK — All Links',
+                    text: 'Check out GAMERZ NETWORK\'s Minecraft Creator Hub!',
+                    url: window.location.href
+                }).catch(() => { });
+            } else {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    showToast('🔗', 'Link copied to clipboard!');
+                });
+            }
+        });
+
+        /* ============================================================
+           COUNTDOWN TIMER
+           ============================================================ */
+        (function () {
+            // Set event date to 30 days from now
+            const eventDate = new Date();
+            eventDate.setDate(eventDate.getDate() + 30);
+
+            function updateCountdown() {
+                const now = new Date();
+                const diff = eventDate - now;
+
+                if (diff <= 0) {
+                    document.getElementById('cd-days').textContent = '00';
+                    document.getElementById('cd-hours').textContent = '00';
+                    document.getElementById('cd-mins').textContent = '00';
+                    document.getElementById('cd-secs').textContent = '00';
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const mins = Math.floor((diff / (1000 * 60)) % 60);
+                const secs = Math.floor((diff / 1000) % 60);
+
+                document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+                document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        })();
+
+        /* ============================================================
+           VISIT COUNTER (localStorage based)
+           ============================================================ */
+        (function () {
+            let count = parseInt(localStorage.getItem('visit-count') || '0', 10);
+            count++;
+            localStorage.setItem('visit-count', count);
+
+            const el = document.getElementById('visit-count');
+            // Animate counter from 0 to count
+            let current = 0;
+            const step = Math.max(1, Math.floor(count / 30));
+            const counterInterval = setInterval(() => {
+                current += step;
+                if (current >= count) {
+                    current = count;
+                    clearInterval(counterInterval);
+                }
+                el.textContent = current.toLocaleString();
+            }, 30);
+        })();
+
+        /* ============================================================
+           PARTICLE SYSTEM (Canvas Fireflies)
+           ============================================================ */
+        (function () {
+            const canvas = document.getElementById('particles-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            let animId;
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            resize();
+            window.addEventListener('resize', resize);
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2.5 + 0.5;
+                    this.speedX = (Math.random() - 0.5) * 0.4;
+                    this.speedY = (Math.random() - 0.5) * 0.3;
+                    this.opacity = Math.random() * 0.5 + 0.1;
+                    this.fadeDir = Math.random() > 0.5 ? 1 : -1;
+                    this.fadeSpeed = Math.random() * 0.008 + 0.002;
+                    // Color: mix of emerald, cyan, gold
+                    const colors = [
+                        [0, 255, 136],
+                        [0, 229, 255],
+                        [255, 215, 0],
+                        [139, 92, 246]
+                    ];
+                    const c = colors[Math.floor(Math.random() * colors.length)];
+                    this.color = c;
+                }
+
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    this.opacity += this.fadeDir * this.fadeSpeed;
+
+                    if (this.opacity >= 0.6) this.fadeDir = -1;
+                    if (this.opacity <= 0.05) this.fadeDir = 1;
+
+                    if (this.x < -10 || this.x > canvas.width + 10 ||
+                        this.y < -10 || this.y > canvas.height + 10) {
+                        this.reset();
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, ${this.opacity})`;
+                    ctx.fill();
+
+                    // Glow
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, ${this.opacity * 0.15})`;
+                    ctx.fill();
+                }
+            }
+
+            // Create particles
+            const count = Math.min(60, Math.floor(window.innerWidth / 20));
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                animId = requestAnimationFrame(animate);
+            }
+
+            animate();
+        })();
+
+        /* ============================================================
+           3D TILT EFFECT ON CARDS
+           ============================================================ */
+        document.querySelectorAll('.link-card, .action-btn').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+                card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+</body>
+
+</html>
